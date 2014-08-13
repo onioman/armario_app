@@ -8,6 +8,12 @@ gem 'pg', '0.15.1'
 group :development, :test do
 	# Use sqlite3 as the database for Active Record
 	gem 'rspec-rails', '2.13.1'
+        gem 'guard-rspec', '2.5.0'
+        gem 'libnotify', '0.8.0'
+        gem 'guard-spork', '1.5.0'
+        gem 'spork-rails', github: 'A-gen/spork-rails'
+        gem 'spork', '1.0.0rc0'
+        gem 'childprocess', '0.3.6'
 end
 
 group :test do
