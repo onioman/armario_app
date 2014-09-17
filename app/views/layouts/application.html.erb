@@ -14,9 +14,15 @@
             <% flash.each do |key, value| %>
                 <%= content_tag(:div, value, class: "alert alert-#{key}") %>
             <% end %>
+            <p>
+                <%= link_to_unless I18n.locale == :en, "English", locale: :en %>
+                <%= link_to_unless I18n.locale == :de, "Deutsch", locale: :de %>
+                <%= link_to_unless I18n.locale == :es, "Espanol", locale: :es %>
+            </p>
             <%= yield %>
             <%= render 'layouts/footer' %>
             <%= debug(params) if Rails.env.development? %>
+            <%= debug(I18n.locale) if Rails.env.development? %>
         </div>
     </body>
 </html>
